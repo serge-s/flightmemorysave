@@ -13,7 +13,8 @@ def main(username, password):
     url_login = 'http://www.flightmemory.com/'
 
     # open a browser
-    br=mechanize.Browser()
+    br = mechanize.Browser()
+    br.set_handle_robots(False)
 
     # set cookies
     cj = cookielib.LWPCookieJar()
